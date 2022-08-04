@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/howieflicks/static/css/main.5fafc69b.css",
+    "main.js": "/howieflicks/static/js/main.f8f9b65a.js",
+    "index.html": "/howieflicks/index.html",
+    "main.5fafc69b.css.map": "/howieflicks/static/css/main.5fafc69b.css.map",
+    "main.f8f9b65a.js.map": "/howieflicks/static/js/main.f8f9b65a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5fafc69b.css",
+    "static/js/main.f8f9b65a.js"
+  ]
+}
