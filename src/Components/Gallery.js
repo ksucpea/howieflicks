@@ -1,25 +1,21 @@
 import React, { useLayoutEffect, useRef, useState } from "react";
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 
+const scale = "w_600";
+const base = `https://res.cloudinary.com/dwedmxczj/image/upload/c_scale,${scale}`;
+
 const Gallery = ({ images }) => {
 
     const Column = ({ images }) => {
 
-        const Image = ({ src, height, width }) => {
-            //const [loaded, setLoaded] = useState(false);
-            return (
-                <LazyLoadImage height={height} width={width} src={src} effect="opacity" threshold={-100} wrapperClassName="gallery-image" style={{ "height": "auto", "width": "100%" }} />
-            )
-        }
-
         const renderImages = () => {
             return images.map(image => {
-                return <Image src={image.src} height={image.height} width={image.width} />
+                return <LazyLoadImage key={image.src} height={image.height * scale} width={image.width * scale} src={base+image.src} effect="opacity" threshold={-50} wrapperClassName="gallery-image" style={{ "height": "auto", "width": "100%" }} />
             });
         }
 
         return (
-            <div style={{ "flex": "1", "width": "20%", }}>
+            <div className="gallery-column">
                 {renderImages()}
             </div>
         )
@@ -33,16 +29,15 @@ const Gallery = ({ images }) => {
             columns.push([]);
         }
         for (let i = 0; i < images.length; i++) {
-            console.log(screen);
             columns[i % screen].push(images[i]);
         }
-        return columns.map(data => {
-            return <Column images={data} />
+        return columns.map((data, index) => {
+            return <Column key={"col-"+index} images={data} />
         });
     }
 
     const determineNumOfCol = () => {
-        if (window.innerWidth > 1200) {
+        if (window.innerWidth > 1400) {
             setScreen(3);
         } else if (window.innerWidth > 800) {
             setScreen(2);
