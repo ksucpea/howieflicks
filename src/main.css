@@ -49,7 +49,7 @@ html, body {
     height: 100vh;
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
+    /*background-attachment: fixed;*/
 }
 
 .section {
@@ -68,7 +68,7 @@ html, body {
 }
 
 .links-bg {
-    transition: .5s opacity;
+    transition: .6s opacity;
     background: #000;
     width: 100%;
     height: 100%;

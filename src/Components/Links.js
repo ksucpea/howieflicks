@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import sections from "../sections.json";
 
 const arrow = <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-arrow-narrow-right" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
     <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -29,10 +30,11 @@ const Links = ({ active }) => {
     }, [active]);
 
     const toPage = (url) => {
+        const img = new Image().src = sections[url].background;
         setOpac(1);
         setTimeout(() => {
             navigate(url);
-        }, 500);
+        }, 600);
     }
 
     return (
@@ -43,12 +45,11 @@ const Links = ({ active }) => {
                         {arrow}
                     </div>
                     <a className="link home-link" onClick={() => toPage("/")}>howie k</a>
-                    <a className="link" onMouseEnter={bringArrowToLink} onClick={() => toPage("/korea")}>korea</a>
-                    <a className="link" onMouseEnter={bringArrowToLink} onClick={() => toPage("/baltimore")}>baltimore</a>
-                    <a className="link" onMouseEnter={bringArrowToLink} onClick={() => toPage("/scary")}>scary stuff man</a>
+                    <a className="link" onMouseEnter={bringArrowToLink} onClick={() => toPage("/architecture")}>architecture</a>
                     <a className="link" onMouseEnter={bringArrowToLink} onClick={() => toPage("/film")}>film</a>
-                    <a className="link" onMouseEnter={bringArrowToLink} onClick={() => toPage("/607")}>H607</a>
-                    {/*<a className="link" onMouseEnter={bringArrowToLink} onClick={() => toPage("/friends")}>live, laugh, love</a>*/}
+                    <a className="link" onMouseEnter={bringArrowToLink} onClick={() => toPage("/portraits")}>portraits</a>
+                    <a className="link" onMouseEnter={bringArrowToLink} onClick={() => toPage("/still")}>still life</a>
+                    <a className="link" onMouseEnter={bringArrowToLink} onClick={() => toPage("/street")}>street</a>
                 </div>
             </div>
         </div>

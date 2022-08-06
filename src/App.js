@@ -10,16 +10,16 @@ function App() {
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap" rel="stylesheet" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
       </Helmet>
       <div className="content">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/korea" element={<Base />} />
-          <Route path="/baltimore" element={<Base />} />
-          <Route path="/friends" element={<Base />} />
-          <Route path="/607" element={<Base />} />
-          <Route path="/scary" element={<Base />} />
+          <Route path="/architecture" element={<Base />} />
           <Route path="/film" element={<Base />} />
+          <Route path="/portraits" element={<Base />} />
+          <Route path="/still" element={<Base />} />
+          <Route path="/street" element={<Base />} />
         </Routes>
       </div>
     </>

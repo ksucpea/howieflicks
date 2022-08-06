@@ -2,6 +2,7 @@ import React, { useLayoutEffect, useRef, useState } from "react";
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 const scale = "w_600";
+const scaled = 0.4;
 const base = `https://res.cloudinary.com/dwedmxczj/image/upload/c_scale,${scale}`;
 
 const Gallery = ({ images }) => {
@@ -10,7 +11,8 @@ const Gallery = ({ images }) => {
 
         const renderImages = () => {
             return images.map(image => {
-                return <LazyLoadImage key={image.src} height={image.height * scale} width={image.width * scale} src={base+image.src} effect="opacity" threshold={-50} wrapperClassName="gallery-image" style={{ "height": "auto", "width": "100%" }} />
+                console.log(image.height * scaled);
+                return <LazyLoadImage key={image.src} height={image.height * scaled} width={image.width * scaled} src={base+image.src} threshold={-50} wrapperClassName="gallery-image" style={{ "height": "auto", "width": "100%" }} />
             });
         }
 
