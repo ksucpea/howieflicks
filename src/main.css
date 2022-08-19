@@ -31,16 +31,52 @@ html, body {
     left: -32px;
 }
 
+.gallery-image-wrapper {
+    position: relative;
+    margin-top: 5vw;
+}
+
+.gallery-image-wrapper:hover {
+    cursor: pointer;
+}
+
 .gallery-image {
     width: 100% !important;
     height: auto !important;
-    margin-top: 5vw;
     transition: .5s opacity;
     opacity: 0;
 }
 
 .gallery-image.lazy-load-image-loaded {
     opacity: 1;
+}
+
+.gallery-image-enlarger {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.enlarged {
+    transition: .5s opacity;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #000000e6;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.enlarged-img {
+    width: 97%;
+    height: 97%;
+    object-fit: contain;
 }
 
 .section-header {
