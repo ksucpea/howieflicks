@@ -108,6 +108,7 @@
         "name": "street",
         "background": "https://res.cloudinary.com/dwedmxczj/image/upload/c_scale,w_1280/v1659493000/street/DSC_0030_uaefab.jpg",
         "gallery": [
+            {"src": "/v1684096351/607/DSC_1363_lmnlqa.jpg", "width": 1485, "height": 990},
             { "src": "/v1659796671/street/unnamed_p9s61z.jpg", "width": 1620, "height": 1080},
             { "src": "/v1659796662/street/unnamed_krcku0.jpg", "width": 1620, "height": 1080},
             { "src": "/v1659796646/street/unnamed_v3ynjq.jpg", "width": 1079, "height": 719},
